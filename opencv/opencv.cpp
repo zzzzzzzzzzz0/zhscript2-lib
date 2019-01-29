@@ -57,7 +57,7 @@ extern "C" void match_tmpl__(const char *imgname, const char *tmplname, int read
 		char *buf, const char *buf_fmt,
 		bool show, int thickness, int lineType, int rect_color_r, int rect_color_g, int rect_color_b) {
 #ifdef ver_debug_
-	printf("match_tmpl__%s_%s_%d_%s_%s\n", imgname, tmplname, method, buf_fmt, showtitle);
+	printf("match_tmpl__%s_%s_%d_%s\n", imgname, tmplname, method, buf_fmt);
 #endif
 	try {
 		Mat tmpl = imread(tmplname, readmode);
