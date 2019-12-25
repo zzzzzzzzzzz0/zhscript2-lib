@@ -27,3 +27,20 @@ static void attr__(std::vector<std::string>* ret, int* err, clpars_item___* ci, 
 	va_end(argv);
 }
 */
+
+#define cb4_if_err__(ret, err0) \
+	if(ret <= 0) { \
+		if(ret == -1) { \
+			break; \
+		} else if(ret == -2) { \
+		} else if(ret == -3) { \
+			*err = jieshiqi_err_go_ + keyword_end_; \
+			break; \
+		} else if(ret == -4) { \
+			*err = jieshiqi_err_go_ + keyword_exit_; \
+			break; \
+		} else { \
+			*err = err0; \
+			break; \
+		} \
+	}
